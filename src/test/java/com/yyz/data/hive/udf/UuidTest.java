@@ -1,4 +1,4 @@
-package com.bestmind.data.hive.udf;
+package com.yyz.data.hive.udf;
 
 
 public class UuidTest {

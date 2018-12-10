@@ -1,4 +1,4 @@
-package com.bestmind.data.hive.udf;
+package com.yyz.data.hive.udf;
 
 import com.google.common.base.Strings;
 import org.apache.hadoop.hive.ql.exec.UDF;

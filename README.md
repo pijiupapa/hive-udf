@@ -12,7 +12,7 @@ mvn package
 hive 加载创建函数
 ```
 add jar /project/hive-udf-1.0.jar;
-create temporary function myuuid as 'com.bestmind.data.hive.udf.Uuid';
-create temporary function mymd5sha1 as 'com.bestmind.data.hive.udf.Md5Sha1';
+create temporary function myuuid as 'Uuid';
+create temporary function mymd5sha1 as 'Md5Sha1';
 ```
 # hive-udf

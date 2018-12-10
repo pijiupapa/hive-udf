@@ -1,18 +1,19 @@
-package com.bestmind.data.hive.udf;
+package com.yyz.data.hive.udf;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.hadoop.hive.ql.exec.UDF;
 import org.apache.hadoop.io.Text;
 
-public class Sha256 extends UDF {
+public class Md5 extends UDF {
     private final Text result = new Text();
 
     public Text evaluate(Text src) {
         if (src == null) {
             return null;
         }
-        String sha256 = DigestUtils.sha256Hex(src.toString());
-        result.set(sha256);
+        String id_md5 = DigestUtils.md5Hex(src.toString());
+        String md5 = DigestUtils.md5Hex(id_md5.toUpperCase() + "PASSWD@098").toUpperCase();
+        result.set(md5);
         return result;
     }
 }
