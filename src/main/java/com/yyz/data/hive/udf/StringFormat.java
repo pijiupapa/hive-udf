@@ -12,7 +12,7 @@ public class StringFormat extends UDF {
             return null;
         }
         String s = src.toString();
-        s = s.replaceAll("#|\\$|%|\\^|&|\\*|@|\\!", "");
+        s = s.replaceAll("#|\\$|%|\\^|&|\\*|@|!|\\d|\\w|\\(.*\\)|（.*）", "");
         result.set(s);
         return result;
     }
